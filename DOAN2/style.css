@@ -1,9 +1,4 @@
-.title{
-    text-align: center;
-}
-/* .navbar{
-    display: inline-block;
-} */
+
 *{
     margin: 0;
     padding: 0;
@@ -29,6 +24,9 @@ html::-webkit-scroll
 html::-webkit-scrollbar-thumb{
     background: red;
 }
+/*-----------------------------------*\
+#HEADER
+\*-----------------------------------*/
 section{
     padding: 3rem 9%;
 }
@@ -49,18 +47,17 @@ section{
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem 9%;
+    box-shadow: 0 5px 10px rgb(125, 124, 124);
+    position: sticky;
 }
 .header .icons{
     font-size: 2.5rem;
     font-weight: bolder;
 }
-.header .icons i{
-    color: rgb(206, 127, 228);
-    border-radius: 50%;
-    /* box-shadow: 5px 0px 2px white; */
-}
-.header i{
+
+.header .logo i{
     color: rgb(143, 41, 238);
+    font-size: 1.5rem;
 }
 .header a{
     color: black;
@@ -69,4 +66,68 @@ section{
 }
 .header a:hover{
     color: rgb(249, 130, 150);
+}
+
+.header .icons div,
+.header .icons i{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    background: rgb(204, 199, 199);
+    border-radius: 4rem;
+    color: #222;
+    margin-left: 5px;
+    text-align: center;
+    cursor: pointer;
+    /* display: inline; */
+}
+/* .header .icons i{
+    color: rgb(235, 85, 100);
+} */
+.header .icons div:hover,
+.header .icons i:hover{
+    background: rgb(231, 239, 239);
+    color: rgb(245, 148, 239);
+}
+.header #menu-btn{
+    display: none;
+}
+/*-----------------------------------*\
+#RESPONSIVE
+\*-----------------------------------*/
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.5rem 2.5rem;
+    }
+}
+@media (max-width: 768px){
+   .header #menu-btn{
+    display: inline-block;
+   }
+   .header .navbar{
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: rgb(255, 255, 255);
+    border-top:0.2rem solid black ;
+    border-bottom:0.2rem solid black ;
+    padding: 0.2rem;
+    clip-path: polygon(0 0,100% 0,100% 0, 0 0); 
+   }
+   .header .navbar.active{
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+   
+   }
+   .header .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 1rem;
+   }
+}
+
+@media (max-width: 450px){
 }
