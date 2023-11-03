@@ -1,3 +1,72 @@
 .title{
     text-align: center;
 }
+/* .navbar{
+    display: inline-block;
+} */
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none; /*chữ mặc định*/
+    text-transform: capitalize; /*viết hoa đầu*/
+    transition: all .2s linear;
+}
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+html::-webkit-scrollbar-track{ /*không gian trống bên dưới thanh tiến trình.*/
+    background: transparent;
+}
+html::-webkit-scroll
+{
+    width: 1rem ;
+}
+html::-webkit-scrollbar-thumb{
+    background: red;
+}
+section{
+    padding: 3rem 9%;
+}
+.heading{
+    text-align: center;
+    color: black;
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+.header{
+    position: fixed; /*nằm cố định trên màn hình*/
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgb(200, 192, 192);
+    display: flex; /*1 dòng*/
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 9%;
+}
+.header .icons{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.header .icons i{
+    color: rgb(206, 127, 228);
+    border-radius: 50%;
+    /* box-shadow: 5px 0px 2px white; */
+}
+.header i{
+    color: rgb(143, 41, 238);
+}
+.header a{
+    color: black;
+    margin: 0 1.5rem;
+    font-size: 1.7rem;
+}
+.header a:hover{
+    color: rgb(249, 130, 150);
+}
