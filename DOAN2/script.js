@@ -19,3 +19,26 @@ window.onscroll = () => {
     // menu.classList.remove('fa-times'); 
         navbar.classList.remove('active');
 }
+
+let slides = document.querySelectorAll('.home .slide');
+console.log(slides);    
+let index = 0;
+function next(){
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    if(index<=3){
+    slides[index].classList.add('active');
+    } else {
+        index = 0;
+    }
+}
+function prev(){
+    slides[index].classList.remove('active');
+    index = (index - 1) % slides.length;
+     slides[index].classList.add('active');
+    // if(index<=0){
+    //     slides[index].classList.add('active');
+    //     } else {
+    //         index = 2;
+    //     }
+}

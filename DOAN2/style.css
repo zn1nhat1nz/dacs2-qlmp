@@ -41,7 +41,7 @@ section{
     box-shadow: 3px 0 1px -1px #fff,
               5px 0 3px  rgb(0, 21, 255),
                -10px 0 10px -5px rgb(13, 166, 197);
-     animation: loading 2s linear infinite;          
+     animation: loading 3s linear infinite;         
 }
 @keyframes loading{
     from{
@@ -77,7 +77,7 @@ section{
 }
 
 .header .logo i{
-    color: rgb(143, 41, 238);
+    color: rgb(199, 31, 255);
     font-size: 2.5rem;
     margin-bottom: 2px;
     text-shadow: 2px 2px 5px cyan;
@@ -127,6 +127,10 @@ section{
     padding: 7rem;
     display: flex;
     min-height: 40vh;
+    display: none;
+}
+.home .active{
+    display: flex;
 }
     
 .home .slide .content{
@@ -147,6 +151,28 @@ section{
     color: aliceblue;
     font-size: 2rem;
     text-shadow: 2px 2px 2px black;
+}
+.home #next-slide,
+.home #pre-slide{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    border: 0.2rem solid black;
+    box-shadow: 2px 2px 2px black;
+    cursor: pointer;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    text-align: center;   
+}
+.home #pre-slide{
+    right: 8rem;
+}
+.home #next-slide:hover,
+.home #pre-slide:hover{
+    background: white;
+    color: pink;
 }
 /*-----------------------------------*\
 #RESPONSIVE
