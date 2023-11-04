@@ -1,4 +1,6 @@
-
+/* body{
+    background-color: rgb(224, 193, 147);
+} */
 *{
     margin: 0;
     padding: 0;
@@ -136,6 +138,7 @@ section{
 .home .slide .content{
     margin: auto;
     text-align: left;
+    margin-left: -2rem;
 }
 .home .slide .content span{
     /* color: aliceblue; */
@@ -165,6 +168,7 @@ section{
     bottom: 2rem;
     right: 2rem;
     text-align: center;   
+    color: wheat;
 }
 .home #pre-slide{
     right: 8rem;
@@ -175,6 +179,18 @@ section{
     color: pink;
 }
 /*-----------------------------------*\
+#CATEGORY
+\*-----------------------------------*/
+.category .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem,1fr));
+    gap: 2rem;
+}
+.category .box-container .box{
+   text-align: center;
+}
+
+/*-----------------------------------*\
 #RESPONSIVE
 \*-----------------------------------*/
 @media (max-width: 991px){
@@ -184,6 +200,9 @@ section{
     .header{
         padding: 1.5rem 2.5rem;
     }
+    /* .home .slide{
+        background-size: cover;
+    } */
 }
 @media (max-width: 768px){
    .header #menu-btn{
