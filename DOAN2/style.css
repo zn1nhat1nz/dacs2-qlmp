@@ -30,6 +30,27 @@ html::-webkit-scrollbar-thumb{
 section{
     padding: 3rem 9%;
 }
+.spinner{
+    /* margin-left: -300px;     */
+    /* width: ; */
+    position: absolute;
+    border-radius: 50px;
+    width: 400px;
+    height: 50px;
+    margin-left: -12px;
+    box-shadow: 3px 0 1px -1px #fff,
+              5px 0 3px  rgb(0, 21, 255),
+               -10px 0 10px -5px rgb(13, 166, 197);
+     animation: loading 2s linear infinite;          
+}
+@keyframes loading{
+    from{
+        transform: rotate(0);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
 .heading{
     text-align: center;
     color: black;
@@ -57,7 +78,10 @@ section{
 
 .header .logo i{
     color: rgb(143, 41, 238);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 2px;
+    text-shadow: 2px 2px 5px cyan;
+    text-transform: uppercase;
 }
 .header a{
     color: black;
@@ -91,6 +115,38 @@ section{
 }
 .header #menu-btn{
     display: none;
+}
+/*-----------------------------------*\
+#HOME
+\*-----------------------------------*/
+.home{
+    position: relative;
+    padding: 0;
+}
+.home .slide{
+    padding: 7rem;
+    display: flex;
+    min-height: 40vh;
+}
+    
+.home .slide .content{
+    margin: auto;
+    text-align: left;
+}
+.home .slide .content span{
+    /* color: aliceblue; */
+    font-size: 4rem;
+    text-shadow:  0 0 0 white,
+    0 0 2px rgb(13, 166, 197),
+    0 0 4px rgb(13, 166, 197),
+    0 0 6px rgb(13, 166, 197),
+    0 0 8px rgb(13, 166, 197),
+    0 0 10px rgb(13, 166, 197);
+}
+.home .slide .content h3{
+    color: aliceblue;
+    font-size: 2rem;
+    text-shadow: 2px 2px 2px black;
 }
 /*-----------------------------------*\
 #RESPONSIVE
