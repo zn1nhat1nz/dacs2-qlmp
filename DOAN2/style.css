@@ -37,8 +37,9 @@ section{
     /* width: ; */
     position: absolute;
     border-radius: 50px;
-    width: 400px;
-    height: 50px;
+    max-width: 40rem;
+    width: 40rem ;
+    height: 5rem;
     margin-left: -12px;
     box-shadow: 3px 0 1px -1px #fff,
               5px 0 3px  rgb(0, 21, 255),
@@ -181,6 +182,13 @@ section{
 /*-----------------------------------*\
 #CATEGORY
 \*-----------------------------------*/
+.category h1:first-child{
+    font-size: 5rem;
+    margin-left: -8rem;
+    text-shadow: 0 0 2px white,
+                 0 0 4px cyan,
+                 0 0 6px cyan;
+}
 .category .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(16rem,1fr));
@@ -189,7 +197,34 @@ section{
 .category .box-container .box{
    text-align: center;
 }
-
+.category .box-container .box:hover{
+    border-radius: 50px;
+    background-color: blanchedalmond;
+}
+.category .box-container .box h1{
+    font-size: 1.7rem;
+    font-weight: 8rem;
+}
+/*-----------------------------------*\
+#PRODUCT
+\*-----------------------------------*/
+.shop h1{
+    font-size: 5rem;
+    text-align: center;
+    text-shadow: 0 0 2px white,
+                 0 0 4px cyan,
+                 0 0 6px cyan;
+}
+ .shop .box-container .box img{
+    width: 200px;
+    height: 200px;
+ }
+ /* .shop .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(31rem,1fr));
+    gap: 2rem;
+    
+ } */
 /*-----------------------------------*\
 #RESPONSIVE
 \*-----------------------------------*/
@@ -231,4 +266,8 @@ section{
 }
 
 @media (max-width: 450px){
+    .spinner{
+        width: 23rem;
+        height: 7rem;
+    }
 }
