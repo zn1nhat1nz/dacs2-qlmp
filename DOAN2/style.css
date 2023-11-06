@@ -119,6 +119,24 @@ section{
 .header #menu-btn{
     display: none;
 }
+.header .xoay{
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    margin-left: -23rem;
+    box-shadow: 0 0 2px white,
+                0px 2px 2px blue,
+                0px 2px 4px blue;
+    animation: spinner 2s linear infinite;            
+}
+@keyframes spinner{
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
 /*-----------------------------------*\
 #HOME
 \*-----------------------------------*/
@@ -184,7 +202,8 @@ section{
 \*-----------------------------------*/
 .category h1:first-child{
     font-size: 5rem;
-    margin-left: -8rem;
+    /* margin-left: -8rem; */
+    text-align: center;
     text-shadow: 0 0 2px white,
                  0 0 4px cyan,
                  0 0 6px cyan;
@@ -215,16 +234,43 @@ section{
                  0 0 4px cyan,
                  0 0 6px cyan;
 }
- .shop .box-container .box img{
+ .shop .box-container .box .product img{
     width: 200px;
     height: 200px;
  }
- /* .shop .box-container{
+ .shop .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(31rem,1fr));
     gap: 2rem;
-    
- } */
+    /* max-width: 200px; */
+    /* display: inline;
+    max-width: 200px; */
+ }
+ .shop .box-container .box {
+    max-width: 230px;
+  
+ }
+ .shop .box-container .box .product button {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: right;
+    font-size: 3rem; 
+    /* display: none; */
+     /* margin-left: 10%; */
+ }
+ 
+ .shop .box-container .box .product button:hover{
+    background-color: red;
+    color: white;
+ }
+
+ .shop .box-container .box .content{
+    text-align: center;
+    margin-left: -2.5rem;
+ }
+
 /*-----------------------------------*\
 #RESPONSIVE
 \*-----------------------------------*/
@@ -267,7 +313,12 @@ section{
 
 @media (max-width: 450px){
     .spinner{
-        width: 23rem;
+        width: 24rem;
         height: 7rem;
+    }
+    .category h1:first-child{
+        font-size: 5rem;
+        text-align: center;
+        margin-left: 0.5rem;
     }
 }
