@@ -119,24 +119,26 @@ section{
 .header #menu-btn{
     display: none;
 }
-.header .xoay{
+/* .header .xoay{
     border-radius: 50%;
     width: 70px;
     height: 70px;
     margin-left: -23rem;
-    box-shadow: 0 0 2px white,
-                0px 2px 2px blue,
-                0px 2px 4px blue;
+    box-shadow: 0 1px 2px white,
+                0px 2px 2px rgb(138, 138, 234),
+                0px 2px 4px blue,
+                0px -2px 2px rgb(150, 150, 225),
+                0px -2px 4px blue;
     animation: spinner 2s linear infinite;            
-}
-@keyframes spinner{
+} */
+/* @keyframes spinner{
     from{
         transform: rotate(360deg);
     }
     to{
         transform: rotate(0);
     }
-}
+} */
 /*-----------------------------------*\
 #HOME
 \*-----------------------------------*/
@@ -235,41 +237,66 @@ section{
                  0 0 6px cyan;
 }
  .shop .box-container .box .product img{
-    width: 200px;
-    height: 200px;
+    width: 20rem;
+    height: 25rem;
+    border-radius: 20px 20px 0 0;
  }
  .shop .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(31rem,1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(22rem,1fr));
+    gap: 5rem;
+    align-items: center;
+    padding-left: 7rem;
     /* max-width: 200px; */
     /* display: inline;
     max-width: 200px; */
  }
  .shop .box-container .box {
-    max-width: 230px;
-  
+    max-width: 20rem;
+    max-height: 30rem;
+    border: 0.2rem solid black;
+    border-radius: 20px;
+    box-shadow: 0 0.5rem 1rem black;
+    
+    
  }
  .shop .box-container .box .product button {
     background-color: white;
-    width: 50px;
-    height: 50px;
+    /* width: 50px;
+    height: 50px; */
+    /* top: 12px; */
     border-radius: 50%;
+    transition: 0.5s ease-out;
     float: right;
-    font-size: 3rem; 
+    font-size: 2rem; 
+    padding: 7px;
+    border: 2px solid;
+    opacity: 0;
+
+    /* display: none; */
     /* display: none; */
      /* margin-left: 10%; */
  }
+ .shop .box-container .box:is(:hover, :focus) .product button{
+    opacity: 1;
+ }
  
  .shop .box-container .box .product button:hover{
-    background-color: red;
+    background-color: palevioletred;
     color: white;
  }
 
  .shop .box-container .box .content{
     text-align: center;
-    margin-left: -2.5rem;
+    margin-left: 3rem;
+    font-size: 10px;
  }
+ .shop .box-container .box:hover{
+   margin-bottom: 3rem;
+   box-shadow:  0 2px 3px white,
+                0 4px 20px rgb(0, 255, 247);
+ }
+
 
 /*-----------------------------------*\
 #RESPONSIVE
